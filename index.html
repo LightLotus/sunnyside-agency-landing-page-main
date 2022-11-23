@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              softred: "#fe7867",
+              yellow: "#fad400",
+              darksaturatedcyan: "#25564b",
+              darkblue: "#19536b",
+              darkmoderatecyan: "#458c7e",
+              verydarksaturatedblue: "#23303e",
+              verydarkgrayishblue: "#5a636c",
+              darkgrayishblue: "#818498",
+              grayishblue: "#a7abae",
+              white: "#ffffff",
+            },
+            fontFamily: {
+              body: ["Barlow"],
+              anotherbody: ["Fraunces"],
+            },
+            backgroundImage: {
+              "hero-image": "url('./images/desktop/image-header.jpg')",
+              "hero-image-mobile": "url('./images/mobile/image-header.jpg')",
+              cherry: "url('./images/desktop/image-graphic-design.jpg')",
+              orange: "url('./images/desktop/image-photography.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <nav
+      id="nav-mobile"
+      class="mobile-menu absolute top-[20%] left-0 translate-x-[7%] bg-[#FFFBF8] w-[calc(100%-48px)] h-[auto] z-[999] hidden"
+    >
+      <ul class="text-center p-10 font-body text-grayishblue">
+        <li class="p-4">About</li>
+        <li class="p-4">Services</li>
+        <li class="p-4">Projects</li>
+        <li
+          class="p-4 m-4 font-anotherbody uppercase bg-yellow rounded-full text-black"
+        >
+          Contact
+        </li>
+      </ul>
+    </nav>
+    <header
+      class="h-[100vh] w-full md:bg-hero-image bg-hero-image-mobile bg-cover bg-no-repeat"
+    >
+      <div class="flex items-center justify-between p-6">
+        <img src="./images/logo.svg" alt="" />
+        <span class="text-white text-[1.5rem] md:hidden" id="hamburger"
+          ><i class="fa-sharp fa-solid fa-bars"></i
+        ></span>
+        <nav class="text-white hidden md:block">
+          <ul class="flex font-body items-center">
+            <li class="mx-6"><a href="#">About</a></li>
+            <li class="mx-6"><a href="#">Services</a></li>
+            <li class="mx-6"><a href="#">Projects</a></li>
+            <li>
+              <a
+                href=""
+                class="ml-6 font-anotherbody text-black bg-[#ffffff] uppercase p-4 rounded-full cursor-pointer hover:bg-[#ffffff]/50 hover:text-white ease-in duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h1
+        class="text-white text-[2.5rem] font-anotherbody text-center uppercase mt-16 tracking-[0.5rem]"
+      >
+        We are creatives
+      </h1>
+      <img
+        class="block mx-auto mt-10"
+        src="./images/icon-arrow-down.svg"
+        alt=""
+      />
+    </header>
+    <section class="md:grid md:grid-cols-2">
+      <img
+        src="./images/desktop/image-transform.jpg"
+        alt=""
+        class="md:col-start-2 md:col-end-3"
+      />
+      <div
+        class="p-6 text-center bg-[#FFFBF8] md:col-start-1 md:col-span-1 md:row-start-1 md:row-span-1 md:text-left md:p-32"
+      >
+        <h3 class="text-[2rem] font-bold font-anotherbody">
+          Transform your brand
+        </h3>
+        <p class="font-body text-grayishblue my-6">
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a href="#" class="font-anotherbody uppercase yellow-learn-more z-[1]"
+          >Learn more</a
+        >
+      </div>
+      <img src="./images/desktop/image-stand-out.jpg" alt="" />
+      <div class="p-6 text-center bg-[#FFFBF8] md:p-32 md:text-left">
+        <h3 class="text-[2rem] font-bold font-anotherbody">
+          Stand out to the right audience
+        </h3>
+        <p class="font-body text-grayishblue my-6">
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <a href="#" class="font-anotherbody uppercase pink-learn-more z-[1]"
+          >Learn more</a
+        >
+      </div>
+    </section>
+    <section class="md:grid md:grid-cols-2">
+      <div class="bg-cherry w-full h-[100vh] bg-cover bg-center relative">
+        <div class="absolute bottom-0 text-center md:bottom-[2rem] md:px-[20%]">
+          <h3 class="text-[2rem] font-anotherbody font-bold text-[#205247]">
+            Graphic design
+          </h3>
+          <p class="font-body text-[#205247] my-8 px-6">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+      </div>
+      <div class="bg-orange w-full h-[100vh] bg-cover bg-center relative">
+        <div class="absolute bottom-0 text-center md:bottom-[2rem] md:px-[20%]">
+          <h3 class="text-[2rem] font-anotherbody font-bold text-[#1D536A]">
+            Photography
+          </h3>
+          <p class="font-body text-[#205247] my-8 px-6 text-[#1D536A]">
+            Increase your credibility by getting the most stunning, high-quality
+            that improve your business image.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#FFFBF8] md:h-[100vh] md:pt-24">
+      <h3
+        class="uppercase tracking-[0.3rem] font-anotherbody text-center text-[1rem] text-grayishblue p-10"
+      >
+        Client testimonials
+      </h3>
+      <div class="md:grid md:grid-cols-3">
+        <div class="p-10">
+          <img
+            src="./images/image-emily.jpg"
+            class="rounded-[50%] w-[4rem] block mx-auto"
+            alt=""
+          />
+          <p class="font-body text-verydarkgrayishblue text-center my-8">
+            We put our trust in photos Sunnyside and they delivered, making sure
+            our needs were met and deadlines were always hit.
+          </p>
+          <p class="text-center font-anotherbody">Emily R.</p>
+          <p class="text-center text-grayishblue font-body text-[0.8rem]">
+            Marketing Director
+          </p>
+        </div>
+        <div class="p-10">
+          <img
+            src="./images/image-thomas.jpg"
+            class="rounded-[50%] w-[4rem] block mx-auto"
+            alt=""
+          />
+          <p class="font-body text-verydarkgrayishblue text-center my-8">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <p class="text-center font-anotherbody">Thomas S. Chief</p>
+          <p class="text-center text-grayishblue font-body text-[0.8rem]">
+            Operating Officer
+          </p>
+        </div>
+        <div class="p-10">
+          <img
+            src="./images/image-jennie.jpg"
+            class="rounded-[50%] w-[4rem] block mx-auto"
+            alt=""
+          />
+          <p class="font-body text-verydarkgrayishblue text-center my-8">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <p class="text-center font-anotherbody">Jennie F.</p>
+          <p class="text-center text-grayishblue font-body text-[0.8rem]">
+            Business Owner
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-2 md:grid-cols-4">
+      <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="" />
+      <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+      <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+      <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
+    </section>
+    <footer class="bg-[#9BDBCB] p-10 md:p-20">
+      <img src="./images/logo-footer.svg" alt="" class="block mx-auto" />
+      <ul
+        class="font-body text-[#205247] flex justify-between my-10 md:w-[30%] md:mx-auto"
+      >
+        <li>
+          <a class="hover:text-white ease-in duration-300" href="#">About</a>
+        </li>
+        <li>
+          <a class="hover:text-white ease-in duration-300" href="#">Services</a>
+        </li>
+        <li>
+          <a class="hover:text-white ease-in duration-300" href="#">Projects</a>
+        </li>
+      </ul>
+      <div
+        class="text-[1.5rem] text-[#205247] flex justify-between mx-20 md:w-[20%] md:mx-auto md:mt-20"
+      >
+        <i
+          class="fa-brands fa-square-facebook hover:text-white ease-in duration-300"
+        ></i
+        ><i
+          class="fa-brands fa-instagram hover:text-white ease-in duration-300"
+        ></i>
+        <i
+          class="fa-brands fa-twitter hover:text-white ease-in duration-300"
+        ></i>
+        <i
+          class="fa-brands fa-pinterest hover:text-white ease-in duration-300"
+        ></i>
+      </div>
+      <div class="attribution mt-8">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kevin W.</a>
+      </div>
+    </footer>
+    <script>
+      //if nav menu is showing, document will add the hidden class
+      //if nav menu is hiding hamburger will remove the hidden class
+      //if isHidden is true, navmenu is hiding
+      //if isHidden is false, navmenu is showing
+      //initial state of the navmenu is hidden, isHidden = true
+
+      const navMobile = document.querySelector("#nav-mobile");
+      const hamburger = document.querySelector("#hamburger");
+
+      hamburger.addEventListener("click", () => {
+        if (navMobile.style.display === "block") {
+          navMobile.style.display = "none";
+        } else {
+          navMobile.style.display = "block";
+        }
+      });
+
+      document.addEventListener("click", () => {
+        if (navMobile.style.display === "block") {
+          navMobile.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
